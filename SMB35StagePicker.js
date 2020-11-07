@@ -34,6 +34,8 @@ for (let i = 1; i <= NUM_WORLD; i++) {
 function updateAlpha(stage, alpha) {
   const e = stage.element;
   const curColor = stage.color;
+  const color = curColor;
+  e.style.backgroundColor = '#' + color.toString(16);
 }
 
 updateAlpha(stages[1], 1.0);
