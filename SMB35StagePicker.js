@@ -1,5 +1,6 @@
 const NUM_WORLD = 8;
 const NUM_AREA  = 4;
+const NUM_STAGES= NUM_WORLD * NUM_AREA;
 const COLOR_STAGE = 0xcc0000ff;
 
 const container = document.querySelector("div.container");
@@ -38,4 +39,8 @@ function updateAlpha(stage, alpha) {
   e.style.backgroundColor = '#' + color.toString(16);
 }
 
-updateAlpha(stages[1], 1.0);
+function randomPickStage() {
+  return Math.floor(NUM_STAGES * Math.random());
+}
+
+updateAlpha(stages[randomPickStage()], Math.random());
