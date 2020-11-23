@@ -43,4 +43,8 @@ function randomPickStage() {
   return Math.floor(NUM_STAGES * Math.random());
 }
 
+function handleStageWheel(event) {
+  event.preventDefault();
+}
+
 updateAlpha(stages[randomPickStage()], Math.random());
